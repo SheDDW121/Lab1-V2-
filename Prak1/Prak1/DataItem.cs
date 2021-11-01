@@ -20,7 +20,7 @@ namespace Prak1
         {
             return ($"X = {Pos.X.ToString(format)}, Y = {Pos.Y.ToString(format)}, Field = ({Val.Real.ToString(format)}" +
                 $" + {Val.Imaginary.ToString(format)}i) (with module = " +
-                $" {Math.Pow(Val.Real * Val.Real + Val.Imaginary * Val.Imaginary, 0.5).ToString(format)})\n");
+                $" {Val.Magnitude.ToString(format)})\n");
         }
         public override string ToString()
         {

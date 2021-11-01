@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Prak1
 {
-    abstract class V2Data
+    abstract class V2Data : IEnumerable <DataItem>
     {
-        public string Ident { get; }
-        public DateTime Date { get;  }
+        public string Ident { get; protected set; }
+        public DateTime Date { get; protected set; }
         public V2Data (string Ident, DateTime Date)
         {
             this.Ident = Ident;
@@ -17,10 +18,16 @@ namespace Prak1
         }
         public abstract int Count { get; }
         public abstract float MinDistance { get; }
-        public abstract string ToLongString(string format);
+        public abstract string ToLongString(string format, bool tabulation = false);  //добавил параметр по умолчанию для более "красивого" вывода (нужно, в основном, для 3-го LINQ-свойства)
         public override string ToString()
         {
             return $"Date = {Date}, Ident = \"{Ident}\"";
+        }
+
+        public abstract IEnumerator<DataItem> GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
