@@ -1,7 +1,7 @@
 E:\VisualStudio\Projects\Prak1\Prak1\bin\Debug\Prak1.exe.config
 E:\VisualStudio\Projects\Prak1\Prak1\bin\Debug\Prak1.exe
 E:\VisualStudio\Projects\Prak1\Prak1\bin\Debug\Prak1.pdb
-E:\VisualStudio\Projects\Prak1\Prak1\obj\Debug\Prak1.csprojAssemblyReference.cache
 E:\VisualStudio\Projects\Prak1\Prak1\obj\Debug\Prak1.csproj.CoreCompileInputs.cache
 E:\VisualStudio\Projects\Prak1\Prak1\obj\Debug\Prak1.exe
 E:\VisualStudio\Projects\Prak1\Prak1\obj\Debug\Prak1.pdb
+E:\VisualStudio\Projects\Prak1\Prak1\obj\Debug\Prak1.csproj.AssemblyReference.cache

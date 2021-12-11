@@ -23,5 +23,11 @@ namespace Prak1
         {
             return new Complex(v2.X * 2, v2.Y * 2);
         }
+        public static Complex CubicPol(Vector2 v2)
+        {
+            //Complex.Re = x^3 * y^2 - 2*x^2*y + 3; Complex.Im = x^3 + x^2 + x + y^3 + y;
+            return new Complex(Math.Pow(v2.X, 3) + v2.Y * v2.Y - 2 * (v2.X * v2.X) * v2.Y + 3, Math.Pow(v2.X, 3) + Math.Pow(v2.Y, 3) 
+                + v2.X * v2.X + v2.X + v2.Y);
+        }
     }
 }

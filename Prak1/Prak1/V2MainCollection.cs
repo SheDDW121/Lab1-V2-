@@ -90,6 +90,21 @@ namespace Prak1
                 return query.Count() == 0 ? null : query;
             }
         }
+        public IEnumerable<V2Data> Mean
+        {
+            get
+            {
+                if (Collection.Count == 0)
+                    return null;
+                var query2 =
+                    from Item in Collection
+                    where Item is V2DataList & Item.Count != 0
+                    orderby Item.Average(x => x.Val.Magnitude) descending
+                    select Item;
+
+                return (IEnumerable<V2Data>) query2;
+            }
+        }
         public IEnumerable <IGrouping<int, V2Data>> Group_Elements
         {
             get => Collection.Count == 0 ? null: Collection.GroupBy(x => x.Count);
